@@ -5,6 +5,8 @@ import 'package:flutter_ecommerce/screens/details/details_screen.dart';
 import 'item_card.dart';
 
 class Body extends StatelessWidget {
+  const Body({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,7 +17,7 @@ class Body extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: kDefaultPaddin),
             child: GridView.builder(
               itemCount: products.length,
-              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisSpacing: kDefaultPaddin,
                 crossAxisSpacing: kDefaultPaddin,
